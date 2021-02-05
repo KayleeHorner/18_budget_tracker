@@ -2,6 +2,12 @@ console.log("Hi from your service-worker.js file!");
 
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
+
+// const iconSizes = ["192", "512"];
+// const iconFiles = iconSizes.map(
+//     (size) => `./assets/icons/icon-${size}x${size}.png`
+// );
+
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
