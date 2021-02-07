@@ -22,6 +22,9 @@ Start project using npm start after installing dependencies. Type transaction in
 
 ![Screenshot](./public/assets/screenshot/screenshot.png)
 
+### Deployed App
+https://secret-brushlands-94804.herokuapp.com/
+
 ## License
 This project is licensed under the MIT license.
 
