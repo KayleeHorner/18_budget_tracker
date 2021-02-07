@@ -16,6 +16,7 @@ const FILES_TO_CACHE = [
   "./assets/index.js",
   "/icons/icon-192x192.png",
   "./icons/icon-512x512.png",
+  "./indexedDb.js"
 
 ];
 
@@ -41,7 +42,7 @@ self.addEventListener("activate", function(evt) {
   evt.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(
-        keyList.map(key => {
+        keyList.map((key) => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
             console.log("Removing old cache data", key);
             return caches.delete(key);
@@ -79,7 +80,7 @@ self.addEventListener("fetch", function(evt) {
   }
 
   evt.respondWith(
-    caches.open(CACHE_NAME).then(cache => {
+    caches.open(CACHE_NAME).then((cache) => {
       return cache.match(evt.request).then(response => {
         return response || fetch(evt.request);
       });

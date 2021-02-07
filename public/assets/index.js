@@ -1,7 +1,5 @@
 let transactions = [];
 let myChart;
-import { pending } from "../indexedDb";
-
 
 fetch("/api/transaction")
   .then(response => {
@@ -138,7 +136,7 @@ function sendTransaction(isAdding) {
   })
   .catch(err => {
     // fetch failed, so save in indexed db
-    saveRecord(transaction);
+  saveRecord(transaction);
 
     // clear form
     nameEl.value = "";
@@ -153,9 +151,3 @@ document.querySelector("#add-btn").onclick = function() {
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
 };
-
-pending("transaction","get").then(results => {
-  results.forEach(expense => {
-    addToList(expense.name, expense.value);
-  });
-});
