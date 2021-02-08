@@ -5,6 +5,8 @@
 
 An app designed for users to track transactions and their account balance.
 
+**There was an error with deployment that I'm finding now** 
+
 ## Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
