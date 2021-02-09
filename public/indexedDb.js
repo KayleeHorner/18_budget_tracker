@@ -63,4 +63,4 @@ function updateDatabase() {
   }
 }
 
-window.addEventListener("onilne", updateDatabase);
+window.addEventListener("online", updateDatabase);
